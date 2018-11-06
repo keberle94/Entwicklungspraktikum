@@ -3,12 +3,14 @@
 <!-- This website is the index html for our presentation mockup. -->
 
 <html><head>
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
   <title>Checklist-Mock1</title>
   <link href="../css/Style.css" rel="stylesheet" type="text/css">
  </head>
  
 <body>
+
+<!--Navigation bar-->
 	
 <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
   <tbody>
@@ -31,6 +33,90 @@
       <button class="big-button">First Empty Checkpoint</button></td>
     <td style="vertical-align: top;"><br>
       <button class="big-button">Next Empty Checkpoint</button></td>
+  </tr>
+  </tbody>
+</table>
+
+<!--Content Table-->
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+  <tr>
+    <td style="vertical-align: top; text-align: center; width: 1011px;"><big><big><big>Checkpoint<br>
+    </big></big></big></td>
+    <td style="vertical-align: top; text-align: center; width: 363px;"><big><big><big>Value<br>
+    </big></big></big></td>
+    <td style="vertical-align: top; text-align: center;"><big><big><big>Documents<br>
+    </big></big></big></td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; width: 1011px;">Ist die
+      Pumpendrehzahl OK?<br>
+    </td>
+    <td style="vertical-align: top; width: 363px;"><input class="radio-button" name="RadioRow1" value="True" type="radio">True <input class="radio-button" name="RadioRow1" value="False" type="radio">False<br>
+    </td>
+    <td style="vertical-align: top;"><br>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; width: 1011px;">Hydraulische
+      Funktion Drehkippmulde (Jede hydraulische Bewegung in allen Richtungen
+      fahren bis Beginn Endanschlag <br>
+      [bei Hydraulikzylinder wird sonst Dämpfung kaputt] erst nach den 3-4
+      mal komplett durchfahren)<br>
+      <input name="Image-R2" alt="Bild-Drehkippmulde" src="Hydraulik.PNG" height="99" type="image" width="169"><br>
+    </td>
+    <td style="vertical-align: top; width: 363px;"><input name="RadioRow2" value="True" type="radio">True <input name="RadioRow2" value="False" type="radio">False<br>
+    </td>
+    <td style="vertical-align: top;"><br>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; width: 1011px;">Welchen
+      Dämpfungswert erreichte die zu testende Feder<br>
+    </td>
+    <td style="vertical-align: top; width: 363px;"><input name="Value-R3" value="0,000"><br>
+    </td>
+    <td style="vertical-align: top;"><br>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; width: 1011px;">Hydraulische
+      Funktion Fahrantrieb + 2. Gang wenn vorhanden (vorwärts fahren,
+      rückwärtsfahren auf Volllast)<br>
+    </td>
+    <td style="vertical-align: top; width: 363px;"><input name="RadioRow3" value="True" type="radio">True <input name="RadioRow3" value="False" type="radio">False<br>
+    </td>
+    <td style="vertical-align: top;"><br>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; width: 1011px;">Hydraulische
+      Funktion Lenken - zuerst durchfahren bevor vollständig (Vollanschlag
+      beide Richtungen m.Lenkrad)<br>
+    </td>
+    <td style="vertical-align: top; width: 363px;"><input name="RadioRow4" value="True" type="radio">True <input name="RadioRow4" value="False" type="radio">False<br>
+    </td>
+    <td style="vertical-align: top;"><br>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; width: 1011px;">Ist
+      Betriebsbremse ok?<br>
+    </td>
+    <td style="vertical-align: top; width: 363px;"><input name="RadioRow5" value="True" type="radio">True <input name="RadioRow5" value="False" type="radio">False<br>
+    </td>
+    <td style="vertical-align: top;"><br>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; width: 1011px;">Handbremse
+      entlüften ok?<br>
+    </td>
+    <td style="vertical-align: top; width: 363px;"><input name="RadioRow6" value="True" type="radio">True <input name="RadioRow6" value="False" type="radio">False<br>
+    </td>
+    <td style="vertical-align: top;"><br>
+    </td>
   </tr>
   </tbody>
 </table>
