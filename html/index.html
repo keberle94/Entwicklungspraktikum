@@ -14,45 +14,19 @@
 <!-- Links to JavaScript file -->
 <script src="../js/script.js"></script>
 
-<form method="post" action="">
-    <p id="formular">
+<!--Navigation bar-->
 
-        <!--Navigation bar-->
+<div id="upperNavigationBar1">
+    <button class="big-button">Zurück</button>
+    <span class="navigationButton"><button class="big-button">Aktualisieren</button></span>
+    <span class="navigationButton"><button class="big-button">Erster Fehler</button></span>
+    <span class="navigationButton"><button class="big-button">Nächster Fehler</button></span>
+    <span class="navigationButton"><button class="big-button">Erster leerer Checkpunkt</button></span>
+    <span class="navigationButton"><button class="big-button">Nächster leerer Checkpunkt</button></span>
+</div>
 
-    <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
-        <tbody>
-        <tr>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Zurück</button>
-            </td>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Aktualisieren</button>
-            </td>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Erster Fehler</button>
-            </td>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Nächster Fehler</button>
-            </td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top;"><br>
-            </td>
-            <td style="vertical-align: top;"><br>
-            </td>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Erster leerer Checkpunkt</button>
-            </td>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Nächster leerer Checkpunkt</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
-    <!--Content Table-->
-    <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
-
+<!--Content Table 1-->
+<table id="contentTable1" style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
         <tbody>
         <tr bgcolor="#d3d3d3">
             <td style="vertical-align: top; text-align: center; width: 1011px;"><big><big><big>Checkpunkt<br>
@@ -116,6 +90,7 @@
                         name="RadioRow3" value="False" type="radio" onclick="chColorToFalse('row4')">False<br>
             </td>
             <td style="vertical-align: top;"><br>
+                <input type="file" id="fileRow4" name="real-file"/>
             </td>
         </tr>
         <tr>
@@ -157,27 +132,13 @@
     </table>
 
     <!-- Lower Navigation bar-->
-    <table>
-        <tbody>
-        <tr>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Vorherige Checkliste</button>
-            </td>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Nächste Checkliste</button>
-            </td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Schließe Checkliste</button>
-            </td>
-            <td style="vertical-align: top;"><br>
-                <button class="big-button">Buchen</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    </p>
-</form>
+
+<div id="lowerNavigationBar">
+    <button class="big-button">Vorherige Checkliste</button>
+    <button class="big-button">Nächste Checkliste</button>
+    <button class="big-button">Schließe Checkliste</button>
+    <button class="big-button">Buchen</button>
+</div>
+
 </body>
 </html>
