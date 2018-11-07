@@ -1,3 +1,7 @@
+.failureRow {
+    display: none;
+}
+
 #upperNavigationBar1 {
     vertical-align: middle;
     padding-top: 1em;

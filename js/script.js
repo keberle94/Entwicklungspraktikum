@@ -12,9 +12,21 @@ function chColorToFalse(elementID) {
 
 //testForValueInTolerance
 
-function testForValueInTolerance(givenValue, maxValue, minValue, elementID) {
-    if (givenValue <= minValue || givenValue > maxValue)
-        chColorToFalse(elementID);
+function testForValueInTolerance(givenValue, maxValue, minValue, changeColorID, hideElementID) {
+    if (givenValue <= minValue || givenValue > maxValue) {
+        chColorToFalse(changeColorID);
+        changeFailureResponse(hideElementID, false);
+    }
+    else {
+        chColorToTrue(changeColorID);
+        changeFailureResponse(hideElementID, true);
+    }
+}
+
+function changeFailureResponse(elementID, hide) {
+    var diffElement = document.getElementById(elementID);
+    if (hide == true)
+        diffElement.style.display = 'none';
     else
-        chColorToTrue(elementID);
+        diffElement.style.display = 'block';
 }
