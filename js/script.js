@@ -13,7 +13,7 @@ function chColorToFalse(elementID) {
 //testForValueInTolerance
 
 function testForValueInTolerance(givenValue, maxValue, minValue, elementID) {
-    if (givenValue < minValue || givenValue > maxValue)
+    if (givenValue <= minValue || givenValue > maxValue)
         chColorToFalse(elementID);
     else
         chColorToTrue(elementID);
