@@ -25,6 +25,7 @@
     <span class="navigationButton"><button class="big-button">Nächster leerer Checkpunkt</button></span>
 </div>
 
+
 <!--Content Table 1-->
 <table id="contentTable1" style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
         <tbody>
@@ -39,14 +40,18 @@
         <tr>
             <td style="vertical-align: top;">Ist die
                 Pumpendrehzahl OK?<br>
+                <div id="failureRow1" class="failureRow">
+                    <button>Fehler erfassen</button>
+                </div>
             </td>
             <td id="row1" style="vertical-align: top;"><input class="radiobutton" name="RadioRow1"
                                                               value="True"
                                                               type="radio"
-                                                              onclick="chColorToTrue('row1')">True
+                                                              onclick="chColorToTrue('row1'); changeFailureResponse('failureRow1', true)">True
                 <input class="radiobutton"
                        name="RadioRow1"
-                       value="False" type="radio" onclick="chColorToFalse('row1')">False<br>
+                       value="False" type="radio"
+                       onclick="chColorToFalse('row1'); changeFailureResponse('failureRow1', false)">False<br>
             </td>
             <td style="vertical-align: top;">
                 <input type="file" id="fileRow1" name="real-file"/>
@@ -60,11 +65,15 @@
                 mal komplett durchfahren)<br>
                 <input name="Image-R2" alt="Bild-Drehkippmulde" src="../pics/Hydraulik.PNG" height="99" type="image"
                        width="169"><br>
+                <div id="failureRow2" class="failureRow">
+                    <button>Fehler erfassen</button>
+                </div>
             </td>
             <td id="row2" style="vertical-align: top;"><input name="RadioRow2" value="True" type="radio"
-                                                              onclick="chColorToTrue('row2')">True
+                                                              onclick="chColorToTrue('row2'); changeFailureResponse('failureRow2', true)">True
                 <input
-                        name="RadioRow2" value="False" type="radio" onclick="chColorToFalse('row2')">False<br>
+                        name="RadioRow2" value="False" type="radio"
+                        onclick="chColorToFalse('row2'); changeFailureResponse('failureRow2', false)">False<br>
 
             </td>
             <td style="vertical-align: top;"><br>
@@ -74,9 +83,12 @@
         <tr>
             <td style="vertical-align: top; width: 1011px;">Welchen
                 Dämpfungswert erreichte die zu testende Feder<br>
+                <div id="failureRow3" class="failureRow">
+                    <button>Fehler erfassen</button>
+                </div>
             </td>
             <td id="row3" style="vertical-align: top; "><input name="Value-R3" value="0,000"
-                                                               onchange="testForValueInTolerance(value, '5','2,5','row3')"><br>
+                                                               onchange="testForValueInTolerance(value, '5','2,5','row3','failureRow3')"><br>
             </td>
             <td style="vertical-align: top;"><br>
                 <input type="file" id="fileRow3" name="real-file"/>
@@ -86,11 +98,15 @@
             <td style="vertical-align: top; ">Hydraulische
                 Funktion Fahrantrieb + 2. Gang wenn vorhanden (vorwärts fahren,
                 rückwärtsfahren auf Volllast)<br>
+                <div id="failureRow4" class="failureRow">
+                    <button>Fehler erfassen</button>
+                </div>
             </td>
             <td id="row4" style="vertical-align: top; "><input name="RadioRow3" value="True" type="radio"
-                                                               onclick="chColorToTrue('row4')">True
+                                                               onclick="chColorToTrue('row4');changeFailureResponse('failureRow4', true)">True
                 <input
-                        name="RadioRow3" value="False" type="radio" onclick="chColorToFalse('row4')">False<br>
+                        name="RadioRow3" value="False" type="radio"
+                        onclick="chColorToFalse('row4'); changeFailureResponse('failureRow4', false)">False<br>
             </td>
             <td style="vertical-align: top;"><br>
                 <input type="file" id="fileRow4" name="real-file"/>
@@ -100,11 +116,15 @@
             <td style="vertical-align: top; ">Hydraulische
                 Funktion Lenken - zuerst durchfahren bevor vollständig (Vollanschlag
                 beide Richtungen m.Lenkrad)<br>
+                <div id="failureRow5" class="failureRow">
+                    <button>Fehler erfassen</button>
+                </div>
             </td>
             <td id="row5" style="vertical-align: top; "><input name="RadioRow4" value="True" type="radio"
-                                                               onclick="chColorToTrue('row5')">True
+                                                               onclick="chColorToTrue('row5'); changeFailureResponse('failureRow5', true)">True
                 <input
-                        name="RadioRow4" value="False" type="radio" onclick="chColorToFalse('row5')">False<br>
+                        name="RadioRow4" value="False" type="radio"
+                        onclick="chColorToFalse('row5');changeFailureResponse('failureRow5', false)">False<br>
             </td>
             <td style="vertical-align: top;"><br>
                 <input type="file" id="fileRow5" name="real-file"/>
@@ -113,10 +133,15 @@
         <tr>
             <td style="vertical-align: top; ">Ist
                 Betriebsbremse ok?<br>
+                <div id="failureRow6" class="failureRow">
+                    <button>Fehler erfassen</button>
+                </div>
             </td>
             <td id="row6" style="vertical-align: top; "><input name="RadioRow5" value="True" type="radio"
-                                                               onclick="chColorToTrue('row6')">True <input
-                    name="RadioRow5" value="False" type="radio" onclick="chColorToFalse('row6')">False<br>
+                                                               onclick="chColorToTrue('row6');changeFailureResponse('failureRow6', true)">True
+                <input
+                        name="RadioRow5" value="False" type="radio"
+                        onclick="chColorToFalse('row6'); changeFailureResponse('failureRow6', false)">False<br>
             </td>
             <td style="vertical-align: top;"><br>
                 <input type="file" id="fileRow6" name="real-file"/>
@@ -125,10 +150,15 @@
         <tr>
             <td style="vertical-align: top; ">Handbremse
                 entlüften ok?<br>
+                <div id="failureRow7" class="failureRow">
+                    <button>Fehler erfassen</button>
+                </div>
             </td>
             <td id="row7" style="vertical-align: top; "><input name="RadioRow6" value="True" type="radio"
-                                                               onclick="chColorToTrue('row7')">True <input
-                    name="RadioRow6" value="False" type="radio" onclick="chColorToFalse('row7')">False<br>
+                                                               onclick="chColorToTrue('row7');changeFailureResponse('failureRow7', true)">True
+                <input
+                        name="RadioRow6" value="False" type="radio"
+                        onclick="chColorToFalse('row7'); changeFailureResponse('failureRow7', false)">False<br>
             </td>
             <td style="vertical-align: top;"><br>
                 <input type="file" id="fileRow7" name="real-file"/>
@@ -145,6 +175,5 @@
     <button class="big-button">Schließe Checkliste</button>
     <button class="big-button">Buchen</button>
 </div>
-
 </body>
 </html>
